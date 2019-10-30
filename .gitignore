@@ -1,2 +1,5 @@
 # mp4 video files
 *.mp4
+
+# DataMiningExample2
+/3981/Data\ Mining/DataMiningExample2
