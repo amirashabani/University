@@ -1,12 +1,15 @@
 import sys
+import SONECLexer
 
 def main():
-    filepath = 'test.sonec'
+    file_path = 'test.sonec'
 
     if(len(sys.argv) >= 2):
-        filepath = sys.argv[1]
+        file_path = sys.argv[1]
 
-    print(filepath)
+    with open(file_path, 'r') as input_file:
+        lexer = SONECLexer(input_file)
+        print(lexer)
 
 if __name__ == "__main__":
     main()
