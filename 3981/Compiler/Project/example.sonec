@@ -1,0 +1,22 @@
+###This is a sample Written in SONEC
+The program crawl 3 user starting from a given user###
+User = node()
+Users = set(user)
+Q = Queue(user)
+Posts = set(post)
+
+User = input #get the username
+Push user in Q
+While len(users) < 10:
+	User = pop q
+	User = crawl node user
+	Users = users + user
+	Newposts = crawl posts user
+	Posts = posts + newposts
+	Links = crawl outgoing-links user
+	For l in links:
+		User = destination(l)
+		Push user in q
+Save users in "user.data"
+Save posts in "posts.data"
+
