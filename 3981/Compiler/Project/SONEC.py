@@ -1,5 +1,5 @@
 import sys
-import SONECLexer
+from SONECLexer import SONECLexer
 
 def main():
     file_path = 'test.sonec'
