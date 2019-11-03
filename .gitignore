@@ -3,3 +3,9 @@
 
 # DataMiningExample2
 /3981/Data\ Mining/DataMiningExample2
+
+# pycache folders
+__pycache__/
+
+# Compiler example
+/3981/Compiler/Project/lexer Example/
