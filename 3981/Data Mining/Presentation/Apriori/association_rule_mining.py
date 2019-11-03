@@ -1,9 +1,10 @@
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from apyori import apriori
 
-def main():
+def main(file_path):
     data = pd.read_csv("rawi3k.csv", header=None)
     (row_count, column_count) = data.shape
 
@@ -17,5 +18,10 @@ def main():
     print(association_results)
 
 if __name__ == "__main__":
-    main()
+    if(len(sys.argv) >= 2):
+        main(sys.argv[1])
+        sys.exit(0)
+    else:
+        print("No input file was specified.")
+        sys.exit(1)
 
