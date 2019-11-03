@@ -5,10 +5,15 @@ import pandas as pd
 from apyori import apriori
 
 def pretty_rule(rule):
-    print(rule)
+    items = [x for x in rule[0]]
+    first = ", ".join(list(rule[2][0][0]))
+    second = ", ".join((rule[2][0][1]))
+    sup = rule[1]
+    conf = rule[2][0][2]
+    lift = rule[2][0][3]
+    print(f"{first} => {second} (s: {sup:.3f}, c: {conf:.3f}, l: {lift:.3f})")
 
 def main(file_path, attributes):
-
     # find index of attribute if it exists
     s_index = (attributes.index('-s') + 1) if('-s' in attributes) else -1
     c_index = (attributes.index('-c') + 1) if('-c' in attributes) else -1
