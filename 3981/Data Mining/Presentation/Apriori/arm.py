@@ -24,7 +24,7 @@ def main(file_path, attributes):
     min_c = float(attributes[c_index]) if c_index != -1 else 0.5
     min_l = float(attributes[l_index]) if l_index != -1 else 3
 
-    data = pd.read_csv("rawi3k.csv", header=None)
+    data = pd.read_csv(file_path, header=None)
     (row_count, column_count) = data.shape
 
     records = []
