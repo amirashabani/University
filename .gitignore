@@ -9,3 +9,6 @@ __pycache__/
 
 # Compiler example
 /3981/Compiler/Project/lexer Example/
+
+# Virtual Environment directory
+**/venv
